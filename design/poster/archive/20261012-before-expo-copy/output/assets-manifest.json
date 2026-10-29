@@ -1,0 +1,40 @@
+{
+  "canvas": [
+    3840,
+    2160
+  ],
+  "safeMarginPx": 160,
+  "assets": {
+    "LOCKUP": {
+      "source": "public/assets/brand/yorigen-brand-lockup.svg",
+      "sha256": "daead641ae2f2c4995e3f9985abbccb99f1910cd9e377db8e492efd7db670ef9"
+    },
+    "JUDGMENT": {
+      "source": "public/assets/judgment/J3-01.png",
+      "sha256": "48a752855a745a7782e71e713c8f9cb4fb1751db66ed3035e27c093b2d009484"
+    },
+    "AZHI": {
+      "source": "design/poster/assets/azhi-user-screenshot.png",
+      "sha256": "21f063d5c807ef9eff54b629a6bb8a1b8b431d8905bf03b42d9cc409c88d36e4"
+    },
+    "AZAO": {
+      "source": "public/assets/azao/ZA2-04-evidence.png",
+      "sha256": "e024917cff1da72ee8182c89364aefd2f390c9f9a4dc6aad15fc6a28c271334f"
+    }
+  },
+  "qr": {
+    "QR_JUDGMENT": {
+      "url": "https://judgment.haaboo.com",
+      "modules": 29,
+      "quietModules": 4,
+      "errorCorrection": "Q"
+    },
+    "QR_WEBSITE": {
+      "url": "https://haaboo.com",
+      "modules": 25,
+      "quietModules": 4,
+      "errorCorrection": "Q"
+    }
+  },
+  "htmlSha256": "f497787bfcefc644559d7c7f22b91916688a07f4fc0d913d61010a8eb157e875"
+}

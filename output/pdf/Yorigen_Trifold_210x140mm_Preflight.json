@@ -1,0 +1,133 @@
+{
+  "verdict": "PASS",
+  "format": {
+    "fold": "roll / C-fold, printer confirms fold positions within fixed 210 x 140 mm trim",
+    "nominalFoldedMm": [
+      70,
+      140
+    ],
+    "trimMm": [
+      210,
+      140
+    ],
+    "bleedMm": 3,
+    "outsideNominalPanelWidthsMm": [
+      70,
+      70,
+      70
+    ],
+    "insideNominalPanelWidthsMm": [
+      70,
+      70,
+      70
+    ],
+    "preDeductedFoldAllowanceMm": 0,
+    "cropMarks": false
+  },
+  "files": {
+    "Yorigen_Trifold_210x140mm.pdf": {
+      "pages": 2,
+      "mediaMm": [
+        210,
+        140
+      ],
+      "trimMm": [
+        210,
+        140
+      ],
+      "bleedPerSideMm": 0,
+      "userUnit": 1,
+      "rotation": 0,
+      "printScaling": "None",
+      "copyStringsVerified": 78,
+      "embeddedFonts": [
+        "/AAAAAA+YorigenPingFang-Medium",
+        "/AAAAAA+YorigenPingFang-Regular",
+        "/AAAAAA+YorigenPingFang-Semibold",
+        "/AAAAAB+YorigenPingFang-Regular"
+      ],
+      "rasterColorSpaces": [
+        "/DeviceCMYK",
+        "/DeviceCMYK",
+        "/DeviceCMYK"
+      ],
+      "minimumLabelPt": 6.0,
+      "minimumBodyPt": 7.5,
+      "panelTextSafetyMm": 5,
+      "textOverlapCheck": "PASS",
+      "effectiveScreenshotPpi": [
+        2566.7,
+        2566.7,
+        2566.7
+      ],
+      "sha256": "21fa17e5d8c12c817f1c90924e8f79e0839c4e8566a932edbdb7cf167196ead9"
+    },
+    "Yorigen_Trifold_Print_216x146mm_Bleed3mm.pdf": {
+      "pages": 2,
+      "mediaMm": [
+        216,
+        146
+      ],
+      "trimMm": [
+        210,
+        140
+      ],
+      "bleedPerSideMm": 3,
+      "userUnit": 1,
+      "rotation": 0,
+      "printScaling": "None",
+      "copyStringsVerified": 78,
+      "embeddedFonts": [
+        "/AAAAAA+YorigenPingFang-Medium",
+        "/AAAAAA+YorigenPingFang-Regular",
+        "/AAAAAA+YorigenPingFang-Semibold",
+        "/AAAAAB+YorigenPingFang-Regular"
+      ],
+      "rasterColorSpaces": [
+        "/DeviceCMYK",
+        "/DeviceCMYK",
+        "/DeviceCMYK"
+      ],
+      "minimumLabelPt": 6.0,
+      "minimumBodyPt": 7.5,
+      "panelTextSafetyMm": 5,
+      "textOverlapCheck": "PASS",
+      "effectiveScreenshotPpi": [
+        2566.7,
+        2566.7,
+        2566.7
+      ],
+      "sha256": "fffb9354eb9615bb551837af80c08d11a6493085eb19e2f591d60adbd1383d38"
+    }
+  },
+  "copyNotes": [
+    "Optional three-line inside footer omitted to preserve readable type.",
+    "Repeated long-term product propositions are present verbatim as product headlines."
+  ],
+  "qr": {
+    "status": "PASS",
+    "checks": [
+      {
+        "file": "print-check",
+        "count": 2,
+        "decodedUrls": [
+          "https://haaboo.com",
+          "https://judgment.haaboo.com"
+        ],
+        "renderDpi": 160,
+        "downsampledDpi": 80
+      },
+      {
+        "file": "net-check",
+        "count": 2,
+        "decodedUrls": [
+          "https://haaboo.com",
+          "https://judgment.haaboo.com"
+        ],
+        "renderDpi": 160,
+        "downsampledDpi": 80
+      }
+    ]
+  },
+  "productionProfile": "Generic CMYK Profile, embedded OutputIntent. Not claimed as certified PDF/X."
+}

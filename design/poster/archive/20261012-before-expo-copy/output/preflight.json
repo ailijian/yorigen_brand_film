@@ -1,0 +1,71 @@
+{
+  "verdict": "PASS",
+  "dimensions": [
+    3840,
+    2160
+  ],
+  "mode": "RGB",
+  "colorProfile": "embedded sRGB",
+  "safeMarginPx": 160,
+  "qrChecks": [
+    {
+      "imageSize": [
+        3840,
+        2160
+      ],
+      "decodedUrls": [
+        "https://haaboo.com",
+        "https://judgment.haaboo.com"
+      ]
+    },
+    {
+      "imageSize": [
+        1920,
+        1080
+      ],
+      "decodedUrls": [
+        "https://haaboo.com",
+        "https://judgment.haaboo.com"
+      ]
+    },
+    {
+      "imageSize": [
+        1280,
+        720
+      ],
+      "decodedUrls": [
+        "https://haaboo.com",
+        "https://judgment.haaboo.com"
+      ]
+    }
+  ],
+  "screenshots": "original asset bytes embedded unchanged; aspect ratios checked",
+  "sourceAssets": {
+    "LOCKUP": {
+      "source": "public/assets/brand/yorigen-brand-lockup.svg",
+      "sha256": "daead641ae2f2c4995e3f9985abbccb99f1910cd9e377db8e492efd7db670ef9"
+    },
+    "JUDGMENT": {
+      "source": "public/assets/judgment/J3-01.png",
+      "sha256": "48a752855a745a7782e71e713c8f9cb4fb1751db66ed3035e27c093b2d009484"
+    },
+    "AZHI": {
+      "source": "design/poster/assets/azhi-user-screenshot.png",
+      "sha256": "21f063d5c807ef9eff54b629a6bb8a1b8b431d8905bf03b42d9cc409c88d36e4"
+    },
+    "AZAO": {
+      "source": "public/assets/azao/ZA2-04-evidence.png",
+      "sha256": "e024917cff1da72ee8182c89364aefd2f390c9f9a4dc6aad15fc6a28c271334f"
+    }
+  },
+  "copyStringsChecked": 17,
+  "offlineRender": true,
+  "layoutAndMobileFit": "PASS",
+  "htmlSha256": "f497787bfcefc644559d7c7f22b91916688a07f4fc0d913d61010a8eb157e875",
+  "pngSha256": "998ed8a31bc63617a2395d1cd7c94511fe9eb0c0ef98b8a798cd96f075956b5e",
+  "limits": [
+    "Real TV and phone-camera scanning at 3–8 metres not field tested.",
+    "Screenshot microcopy is illustrative; large poster labels carry the reading.",
+    "HTML uses the device Chinese system font stack; PNG is the fixed visual master."
+  ]
+}

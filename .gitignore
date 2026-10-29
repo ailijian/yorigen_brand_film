@@ -1,0 +1,9 @@
+node_modules/
+.remotion/
+.cache/
+renders/determinism/
+*.log
+.DS_Store
+
+# Reproducible intermediate frame and render probes
+tmp/

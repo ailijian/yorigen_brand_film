@@ -1,0 +1,78 @@
+{
+  "verdict": "PASS",
+  "dimensions": [
+    3840,
+    2160
+  ],
+  "mode": "RGB",
+  "colorProfile": "embedded sRGB",
+  "safeMarginPx": 160,
+  "qrChecks": [
+    {
+      "imageSize": [
+        3840,
+        2160
+      ],
+      "decodedUrls": [
+        "http://weixin.qq.com/r/mp/qSdgeDDEN21IrXQb93K7",
+        "https://haaboo.com",
+        "https://judgment.haaboo.com"
+      ]
+    },
+    {
+      "imageSize": [
+        1920,
+        1080
+      ],
+      "decodedUrls": [
+        "http://weixin.qq.com/r/mp/qSdgeDDEN21IrXQb93K7",
+        "https://haaboo.com",
+        "https://judgment.haaboo.com"
+      ]
+    },
+    {
+      "imageSize": [
+        1280,
+        720
+      ],
+      "decodedUrls": [
+        "http://weixin.qq.com/r/mp/qSdgeDDEN21IrXQb93K7",
+        "https://haaboo.com",
+        "https://judgment.haaboo.com"
+      ]
+    }
+  ],
+  "screenshots": "original asset bytes embedded unchanged; aspect ratios checked",
+  "sourceAssets": {
+    "LOCKUP": {
+      "source": "public/assets/brand/yorigen-brand-lockup.svg",
+      "sha256": "daead641ae2f2c4995e3f9985abbccb99f1910cd9e377db8e492efd7db670ef9"
+    },
+    "JUDGMENT": {
+      "source": "public/assets/judgment/J3-01.png",
+      "sha256": "48a752855a745a7782e71e713c8f9cb4fb1751db66ed3035e27c093b2d009484"
+    },
+    "AZHI": {
+      "source": "design/poster/assets/azhi-user-screenshot.png",
+      "sha256": "21f063d5c807ef9eff54b629a6bb8a1b8b431d8905bf03b42d9cc409c88d36e4"
+    },
+    "AZAO": {
+      "source": "public/assets/azao/ZA2-04-evidence.png",
+      "sha256": "e024917cff1da72ee8182c89364aefd2f390c9f9a4dc6aad15fc6a28c271334f"
+    },
+    "WECHAT_QR": {
+      "source": "design/poster/assets/wechat-official-qr.jpg",
+      "sha256": "173a07155b7fc182a2fed9cfc678214c37b86ab0ad36aa14702f12bd076dee24"
+    }
+  },
+  "copyStringsChecked": 31,
+  "offlineRender": true,
+  "layoutAndMobileFit": "PASS",
+  "htmlSha256": "a0e46d36f1283fd9907ce63eac31cd2ddd8cf8cfbb42b09bddfdf9d9d9070189",
+  "pngSha256": "a4ae624d0bf7548d8ab4a3d487d6be7e54040f2d4ef7238e0800b26f725cd859",
+  "limits": [
+    "Real TV and phone-camera scanning at 3–8 metres not field tested.",
+    "Screenshot microcopy is illustrative; large poster labels carry the reading.",
+    "HTML uses the device Chinese system font stack; PNG is the fixed visual master."
+  ]
+}

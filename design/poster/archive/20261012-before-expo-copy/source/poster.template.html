@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="源点AI 4K 品牌总览海报：AI 判断力快测、阿织与阿造。">
+  <title>源点AI｜4K 品牌总览海报</title>
+  <style>
+    :root {
+      --navy: #0d2b45;
+      --ink: #263440;
+      --muted: #627481;
+      --paper: #fbfbf8;
+      --line: #d8e0e6;
+      --growth: #22c39e;
+      --control: #5968f2;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; }
+    body {
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #e9edef;
+      color: var(--navy);
+      font-family: "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    #viewport { position: relative; }
+    #poster {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3840px;
+      height: 2160px;
+      overflow: hidden;
+      transform-origin: top left;
+      background: var(--paper);
+      isolation: isolate;
+    }
+    .background-field {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+    .brand, .products, .action {
+      position: absolute;
+      top: 160px;
+      height: 1840px;
+    }
+    .brand { left: 160px; width: 850px; }
+    .products { left: 1110px; width: 1570px; }
+    .action { left: 2780px; width: 900px; text-align: center; }
+    .lockup { display: block; width: 650px; height: auto; }
+    h1, h2, h3, p, figure { margin: 0; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+    .brand-promise {
+      position: absolute;
+      top: 350px;
+      font-size: 112px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -2px;
+    }
+    .brand-promise span { display: block; }
+    .brand-intro { position: absolute; top: 985px; width: 100%; }
+    .brand-intro > p {
+      font-size: 44px; line-height: 1.5; color: var(--muted);
+      margin-bottom: 40px;
+    }
+    .brand-intro ul { list-style: none; padding: 0; margin: 0; }
+    .brand-intro li {
+      position: relative;
+      padding-left: 42px;
+      margin-top: 36px;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .brand-intro li::before {
+      content: ""; position: absolute; top: 29px; left: 0;
+      width: 12px; height: 12px; border-radius: 50%; background: var(--navy);
+    }
+    .brand-intro li:last-child { font-size: 46px; }
+    .brand-path {
+      position: absolute; left: 0; bottom: 112px; width: 810px; height: 175px;
+    }
+    .brand-summary {
+      position: absolute; bottom: 0; left: 0;
+      font-size: 43px; line-height: 1.45; font-weight: 500;
+    }
+    .section-title {
+      font-size: 72px; line-height: 1.4; font-weight: 600; letter-spacing: -1.8px;
+    }
+    .product-rule {
+      position: absolute; top: 186px; left: 0; width: 100%;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+    }
+    .product-rule span { height: 4px; background: var(--line); position: relative; }
+    .product-rule span::before {
+      content: ""; position: absolute; top: -7px; left: 0;
+      height: 18px; width: 18px; border: 3px solid var(--navy);
+      border-radius: 50%; background: var(--paper);
+    }
+    .product-rule span:nth-child(2)::before { border-color: var(--growth); }
+    .product-rule span:nth-child(3)::before { border-color: var(--control); }
+    .product-grid {
+      position: absolute; top: 272px; left: 0; width: 100%;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+    }
+    .product-card {
+      position: relative;
+      height: 1468px;
+      border: 2px solid #e4e9ea;
+      border-radius: 36px;
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(13, 43, 69, .035);
+      overflow: hidden;
+    }
+    .product-card::before {
+      content: ""; display: block; height: 8px; background: var(--navy);
+    }
+    .product-card.azhi::before { background: var(--growth); }
+    .product-card.azao::before { background: var(--control); }
+    .screen-stage {
+      position: relative;
+      height: 972px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f6f8f9;
+      border-bottom: 2px solid #edf0f1;
+    }
+    .screen-stage img {
+      display: block;
+      width: 402px;
+      height: auto;
+      max-height: 880px;
+      object-fit: contain;
+      border-radius: 20px;
+      box-shadow: 0 12px 36px rgba(13, 43, 69, .08);
+    }
+    .azao .screen-stage { flex-direction: column; gap: 75px; background: #f7f7fc; }
+    .azao .screen-stage img { width: 456px; max-height: none; border-radius: 12px; }
+    .delivery-terms { display: grid; gap: 27px; font-size: 42px; font-weight: 500; }
+    .delivery-terms span {
+      display: flex; align-items: center; gap: 25px;
+    }
+    .delivery-terms span::before {
+      content: ""; width: 11px; height: 11px; border-radius: 50%;
+      background: var(--control);
+    }
+    .product-copy { padding: 44px 32px 0; }
+    .product-copy h3 { font-size: 58px; line-height: 1.4; font-weight: 600; }
+    .product-copy > p { margin-top: 24px; font-size: 46px; line-height: 1.6; font-weight: 500; }
+    .product-copy .short-words {
+      margin-top: 27px; font-size: 39px; line-height: 1.5; color: var(--muted);
+      font-weight: 400;
+    }
+    .products-footer {
+      position: absolute; bottom: 0; left: 0; width: 100%;
+      display: flex; align-items: center; gap: 32px;
+      font-size: 38px; color: var(--muted); line-height: 1.4;
+    }
+    .products-footer::before { content: ""; flex: 1; height: 2px; background: var(--line); }
+    .products-footer::after { content: ""; flex: 1; height: 2px; background: var(--line); }
+    .action .section-title { font-size: 78px; letter-spacing: 0; }
+    .qr-block { position: absolute; left: 0; width: 100%; }
+    .qr-block.primary { top: 140px; }
+    .qr-block.secondary { top: 1003px; }
+    .qr-block h3 { font-size: 60px; font-weight: 600; line-height: 1.4; }
+    .qr-description { margin-top: 16px; font-size: 40px; line-height: 1.45; }
+    .qr {
+      display: block; width: 500px; height: 500px;
+      margin: 26px auto 0; background: #fff;
+      border-radius: 0;
+    }
+    .qr-url {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--navy);
+      font-size: 42px;
+      line-height: 1.4;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: -.4px;
+    }
+    .action-note { position: absolute; bottom: 0; width: 100%; font-size: 36px; line-height: 1.4; color: var(--muted); }
+    @media print {
+      @page { size: 3840px 2160px; margin: 0; }
+      html, body, #viewport { width: 3840px !important; height: 2160px !important; background: var(--paper); }
+      #poster { transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="viewport">
+    <main id="poster" aria-label="源点AI 品牌总览海报">
+      <svg class="background-field" width="3840" height="2160" viewBox="0 0 3840 2160" aria-hidden="true">
+        <rect x="2735" y="112" width="990" height="1936" rx="48" fill="#f0f3f3"/>
+        <path d="M -180 1820 C 200 1780 360 1710 660 1755 S 1050 2100 1430 2220" stroke="#e6ecec" stroke-width="3" fill="none"/>
+        <circle cx="250" cy="1770" r="8" fill="#d9e3e7"/>
+        <path d="M 1090 -140 C 1360 80 1540 30 1820 -70" stroke="#edf0ef" stroke-width="3" fill="none"/>
+      </svg>
+
+      <section class="brand" aria-labelledby="brand-name">
+        <h1 id="brand-name" class="sr-only">源点AI｜Yorigen AI</h1>
+        <img class="lockup" data-safe src="{{LOCKUP}}" alt="源点AI 冻结品牌标志 YORIGEN">
+        <p class="brand-promise" data-safe><span>看清自己，</span><span>织成能力，</span><span>掌控成果。</span></p>
+        <div class="brand-intro" data-safe>
+          <p>帮助个人与组织：</p>
+          <ul>
+            <li>看清 AI 判断表现</li>
+            <li>持续提升 AI 应用能力</li>
+            <li>让 AI 进入真实工作与产品交付后<br>仍可控、可验证</li>
+          </ul>
+        </div>
+        <svg class="brand-path" viewBox="0 0 810 175" aria-hidden="true">
+          <path d="M 50 22 C 165 60 245 132 404 145" fill="none" stroke="#0d2b45" stroke-width="3"/>
+          <path d="M 404 145 C 404 92 404 72 404 20" fill="none" stroke="#22c39e" stroke-width="3"/>
+          <path d="M 404 145 C 540 125 640 65 755 22" fill="none" stroke="#5968f2" stroke-width="3"/>
+          <circle cx="404" cy="145" r="10" fill="#0d2b45"/>
+          <circle cx="404" cy="20" r="7" fill="#fbfbf8" stroke="#22c39e" stroke-width="3"/>
+          <circle cx="755" cy="22" r="7" fill="#fbfbf8" stroke="#5968f2" stroke-width="3"/>
+        </svg>
+        <p class="brand-summary" data-safe>从判断，到成长，到产品交付掌控。</p>
+      </section>
+
+      <section class="products" aria-labelledby="products-title">
+        <h2 id="products-title" class="section-title" data-safe>从判断，到成长，到交付掌控</h2>
+        <div class="product-rule" aria-hidden="true"><span></span><span></span><span></span></div>
+        <div class="product-grid">
+          <article class="product-card judgment" data-panel>
+            <figure class="screen-stage">
+              <img data-safe data-source="judgment" src="{{JUDGMENT}}" alt="此前拍摄的 AI 判断力快测真实界面，包含信、改、查、停四个选择">
+            </figure>
+            <div class="product-copy" data-safe>
+              <h3>AI 判断力快测</h3>
+              <p>几分钟看清你的<br>AI 判断表现</p>
+              <p class="short-words">信 / 改 / 查 / 停</p>
+            </div>
+          </article>
+          <article class="product-card azhi" data-panel>
+            <figure class="screen-stage">
+              <img data-safe data-source="azhi" src="{{AZHI}}" alt="用户指定的阿织 App 地图截图，原图完整保留">
+            </figure>
+            <div class="product-copy" data-safe>
+              <h3>阿织</h3>
+              <p>把想学会的，<br>变成自己的能力</p>
+              <p class="short-words">目标驱动学习</p>
+            </div>
+          </article>
+          <article class="product-card azao" data-panel>
+            <figure class="screen-stage">
+              <img data-safe data-source="azao" src="{{AZAO}}" alt="此前拍摄的阿造真实产品现状界面，显示当前范围已被本轮证据证明">
+              <div class="delivery-terms" data-safe><span>产品推进</span><span>验收检查</span><span>交付连续性</span></div>
+            </figure>
+            <div class="product-copy" data-safe>
+              <h3>阿造</h3>
+              <p>AI负责执行，<br>产品始终由你掌控</p>
+              <p class="short-words">AI产品交付掌控</p>
+            </div>
+          </article>
+        </div>
+        <p class="products-footer" data-safe>判断 · 成长 · 掌控</p>
+      </section>
+
+      <section class="action" aria-labelledby="action-title">
+        <h2 id="action-title" class="section-title" data-safe>现在就开始体验</h2>
+        <div class="qr-block primary" data-panel>
+          <h3 data-safe>AI 判断力快测</h3>
+          <p class="qr-description" data-safe>扫码挑战：你真的知道<br>什么时候该信 AI 吗？</p>
+          <a href="https://judgment.haaboo.com" aria-label="打开 AI 判断力快测"><img data-safe class="qr" data-qr="judgment" src="{{QR_JUDGMENT}}" alt="AI 判断力快测二维码"></a>
+          <a class="qr-url" data-safe href="https://judgment.haaboo.com">judgment.haaboo.com</a>
+        </div>
+        <div class="qr-block secondary" data-panel>
+          <h3 data-safe>源点AI官网</h3>
+          <p class="qr-description" data-safe>扫码了解产品、课程与最新内容</p>
+          <a href="https://haaboo.com" aria-label="打开源点AI官网"><img data-safe class="qr" data-qr="website" src="{{QR_WEBSITE}}" alt="源点AI官网二维码"></a>
+          <a class="qr-url" data-safe href="https://haaboo.com">haaboo.com</a>
+        </div>
+        <p class="action-note" data-safe>先测一测，再继续了解源点AI。</p>
+      </section>
+    </main>
+  </div>
+  <script>
+    // Fit the immutable 4K canvas; no network resources or animation.
+    const poster = document.getElementById('poster');
+    const viewport = document.getElementById('viewport');
+    function fitPoster() {
+      const scale = Math.min(innerWidth / 3840, innerHeight / 2160);
+      viewport.style.width = `${3840 * scale}px`;
+      viewport.style.height = `${2160 * scale}px`;
+      poster.style.transform = `scale(${scale})`;
+    }
+    addEventListener('resize', fitPoster);
+    fitPoster();
+  </script>
+</body>
+</html>
