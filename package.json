@@ -1,0 +1,41 @@
+{
+  "name": "yorigen-brand-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src scripts",
+    "compositions": "remotion compositions src/index.ts",
+    "verify:assets": "node scripts/verify-assets.mjs",
+    "generate:subtitles": "node scripts/generate-subtitles.mjs",
+    "render:final": "node scripts/render-final.mjs",
+    "verify:motion-anchors": "node scripts/verify-motion-anchors.mjs",
+    "verify:s04-narrative": "node scripts/verify-s04-narrative.mjs",
+    "verify:subtitles": "node scripts/verify-subtitles.mjs",
+    "verify:final-media": "node scripts/verify-final-media.mjs",
+    "check": "pnpm verify:assets && pnpm verify:subtitles && pnpm verify:s04-narrative && pnpm typecheck && pnpm lint && pnpm compositions"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.524",
+    "@remotion/cli": "4.0.524",
+    "@remotion/renderer": "4.0.524",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.524"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.2",
+    "@types/node": "24.10.1",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "eslint": "9.39.2",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.70.0"
+  }
+}
